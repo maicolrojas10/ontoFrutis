@@ -1,0 +1,141 @@
+.header {
+  width: 100%;
+  background-color: #43a047; /* Tono verde más profesional */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Reduje el padding horizontal para más espacio en pantallas pequeñas */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+.imgLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre logo y texto */
+  flex-shrink: 0; /* Evita que se encoja demasiado rápido */
+}
+
+.imgLogo .logo {
+  height: 40px; /* Tamaño del logo */
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.imgLogo h1 {
+  color: white;
+  font-size: 22px; /* Tamaño del título */
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap; /* Evita que el título se rompa */
+}
+
+.navbar {
+  flex-grow: 1; /* Ocupa espacio restante */
+  display: flex;
+  justify-content: flex-end; /* Alinea a la derecha */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Evita que los enlaces se rompan */
+  align-items: center; /* Centra verticalmente elementos dentro */
+}
+
+.navbar ul li {
+  display: flex;
+  align-items: center; /* Centra verticalmente cada ítem */
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #f1f8e9;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón ícono para cerrar sesión */
+.logout-icon-button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Tamaño más grande para el icono */
+  line-height: 1;
+}
+
+.logout-icon-button svg {
+  display: block; /* Evita espacios extra alrededor del SVG */
+}
+
+.logout-icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffcc00;
+}
+
+.logout-icon-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffcc00;
+}
+
+/* Espacio debajo del header fijo */
+.spacer {
+  height: 60px; /* Ajusta según altura real de tu header */
+}
+
+/* Responsive para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .imgLogo {
+    margin-bottom: 5px;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: flex-start; /* Alinea a la izquierda en pantallas pequeñas */
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+}

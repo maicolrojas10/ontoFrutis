@@ -1,0 +1,90 @@
+/* Estilos para el contenedor del formulario de login */
+.login-box {
+  margin-top: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: #1976d2 1px solid;
+  width: 100%;
+  
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo para el logo dentro del formulario de login */
+.logo {
+  width: 70%;
+  max-width: 320px; /* Asegura que el logo no se expanda más allá de 320px */
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+/* Estilo para el enlace de registro en la parte inferior */
+.register-link-box {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Estilo para el enlace de registro */
+.register-link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+/* Efecto de hover en el enlace de registro */
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el Snackbar (alerta flotante) */
+.snackbar {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed !important;
+  z-index: 1300;
+}
+
+/* Estilo para las alertas dentro del login */
+.alert {
+  width: 100%;
+}
+
+/* Medias Queries para pantallas más pequeñas (móviles) */
+@media screen and (max-width: 600px) {
+  .login-box {
+      margin-top: 20px;
+      padding: 16px;
+      max-width: 90%; /* Asegura que el login ocupe un máximo del 90% del ancho */
+  }
+
+  .logo {
+      max-width: 250px; /* Logo más pequeño en móviles */
+  }
+}
+
+/* Medias Queries para pantallas medianas (tablets) */
+@media screen and (max-width: 768px) {
+  .login-box {
+      padding: 20px;
+      max-width: 80%; /* El contenedor de login ocupa el 80% del ancho */
+  }
+
+  .logo {
+      max-width: 280px; /* Ajuste del logo para tablets */
+  }
+}
+
+/* Medias Queries para pantallas grandes (escritorios) */
+@media screen and (min-width: 1024px) {
+  .login-box {
+      max-width: 400px; /* Mantiene el tamaño original para pantallas grandes */
+  }
+
+  .logo {
+      max-width: 320px; /* Logo tamaño original */
+  }
+}

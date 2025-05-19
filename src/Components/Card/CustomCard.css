@@ -1,0 +1,96 @@
+/* 🔸 Contenedor general para organizar varias tarjetas */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: #eaffea;
+}
+
+/* 🔸 Cada tarjeta */
+.card-container {
+    width: 300px; /* 🔸 Establece un ancho fijo */
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container:hover {
+    transform: translateY(-8px);
+}
+
+/* 🔸 Imagen de la tarjeta */
+.card-image {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-image img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔸 Contenido de la tarjeta */
+.card-content {
+    background: linear-gradient(180deg, #2f2f2f 0%, #1c1c1c 100%);
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 360px;
+    justify-content: space-between;
+}
+
+/* 🔸 Títulos */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.card-subtitle {
+    color: #f9ca24;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* 🔸 Detalles */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #444;
+    padding-top: 12px;
+    font-size: 0.95rem;
+}
+
+.card-details strong {
+    color: #f1c40f;
+}
+
+.card-details span {
+    color: #dcdcdc;
+    word-wrap: break-word;
+    word-break: break-word; /* 🔸 Evita que el texto largo rompa el diseño */
+}

@@ -1,0 +1,133 @@
+/* Reseteo básico */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor general con fondo degradado y espacio para el header fijo */
+.insert-new-container {
+  display: flex;
+  flex-direction: column;
+
+  /* Altura total menos header (70px) */
+  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+
+  /* Evitar scroll en body */
+  overflow: hidden;
+
+  /* Fondo degradado que cubre toda el área */
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+
+  /* Espaciado interno */
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Alineamos el formulario arriba y centrado */
+  justify-content: flex-start;
+  align-items: center;
+
+  /* Mover contenedor hacia abajo para no quedar debajo del header fijo */
+  margin-top: 70px;
+}
+
+/* Caja del formulario: fondo blanco, sombra, bordes redondeados y scroll interno */
+.form-box {
+  background: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.1);
+  width: 80%;
+  max-width: 600px;
+
+  /* Altura fija para permitir scroll solo dentro */
+  height: 80vh;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Título del formulario */
+.form-title {
+  font-weight: 700;
+  color: #2e7d32; /* Verde bonito */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Inputs y cajas con separación */
+.form-input {
+  margin-bottom: 20px;
+}
+
+/* Botones para añadir vitaminas y minerales */
+.add-button {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #388e3c;
+}
+
+/* Botón principal de guardar */
+button[type="submit"] {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1b5e20;
+}
+
+/* Scrollbar personalizado para el form-box */
+.form-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-box::-webkit-scrollbar-track {
+  background: #e0f2f1;
+  border-radius: 4px;
+}
+
+.form-box::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 4px;
+  border: 2px solid #e0f2f1;
+}
+
+/* Estilos para chips de vitaminas y minerales */
+.MuiChip-root {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 700px) {
+  .insert-new-container {
+    margin-top: 120px; /* más espacio arriba para evitar tapar */
+  }
+  .form-box {
+    height: 90vh;
+    padding: 30px;
+    width: 95%;
+  }
+}

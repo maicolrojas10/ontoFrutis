@@ -1,0 +1,115 @@
+.home-container {
+    background: linear-gradient(to bottom right, #f5fff5, #e0ffe0);
+    padding: 2rem 1rem;
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 70px; /* Asegúrate que esto coincida con la altura del header */
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .intro-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-section p, .intro-section h3 {
+        font-size: 1rem;
+    }
+
+    .info-card {
+        width: 90%;
+    }
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.intro-section blockquote {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #388e3c;
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-left: 5px solid #66bb6a;
+    display: inline-block;
+}
+
+.card-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* NUEVO: Estilo para mostrar las tarjetas en tres columnas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 1.5rem 1rem;
+    justify-items: center;
+}
+
+/* Estilos para el botón "Consultar Frutas" */
+.center-button {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.explore-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(232, 207, 22, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  
+}
+
+.explore-button:hover,
+.explore-button:focus {
+  background: linear-gradient(135deg, #81c784, #2e7d32);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  outline: none;
+  color: #e8f5e9;
+}
+
+.explore-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.5);
+}
