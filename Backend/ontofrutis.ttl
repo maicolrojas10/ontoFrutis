@@ -1,0 +1,2821 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix data: <http://localhost:3030/ontofrutis/data#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://localhost:3030/ontofrutis/data#> .
+
+<http://localhost:3030/ontofrutis/data> rdf:type owl:ontology ;
+                                         owl:versioniri <http://localhost:3030/ontofrutis/data> .
+
+#################################################################
+#    object properties
+#################################################################
+
+###  http://localhost:3030/ontofrutis/data#tienevitamina
+data:tienevitamina rdf:type owl:objectproperty ;
+                   rdfs:domain data:fruta ;
+                   rdfs:range data:vitamina .
+
+
+###  http://localhost:3030/ontofrutis/data#tiene_mineral
+data:tiene_mineral rdf:type owl:objectproperty ;
+                   rdfs:domain data:fruta ;
+                   rdfs:range data:minerales .
+
+
+#################################################################
+#    data properties
+#################################################################
+
+###  http://localhost:3030/ontofrutis/data#deregion
+data:deregion rdf:type owl:datatypeproperty ;
+              rdfs:domain data:fruta ;
+              rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#descripcionvitamina
+data:descripcionvitamina rdf:type owl:datatypeproperty ;
+                         rdfs:domain data:vitamina ;
+                         rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrecientificofruta
+data:nombrecientificofruta rdf:type owl:datatypeproperty ;
+                           rdfs:domain data:fruta ;
+                           rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrecientificomineral
+data:nombrecientificomineral rdf:type owl:datatypeproperty ;
+                             rdfs:domain data:minerales ;
+                             rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrecomunfruta
+data:nombrecomunfruta rdf:type owl:datatypeproperty ;
+                      rdfs:domain data:fruta ;
+                      rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrecomunmineral
+data:nombrecomunmineral rdf:type owl:datatypeproperty ;
+                        rdfs:domain data:minerales ;
+                        rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrecomunvitamina
+data:nombrecomunvitamina rdf:type owl:datatypeproperty ;
+                         rdfs:domain data:vitamina ;
+                         rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#nombrerealvitamina
+data:nombrerealvitamina rdf:type owl:datatypeproperty ;
+                        rdfs:domain data:vitamina ;
+                        rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#pesomolarvitamina
+data:pesomolarvitamina rdf:type owl:datatypeproperty ;
+                       rdfs:domain data:vitamina ;
+                       rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#puntodeebullisionvitamina
+data:puntodeebullisionvitamina rdf:type owl:datatypeproperty ;
+                               rdfs:domain data:vitamina ;
+                               rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#puntodefusionvitamina
+data:puntodefusionvitamina rdf:type owl:datatypeproperty ;
+                           rdfs:domain data:vitamina ;
+                           rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#simboloquimicomineral
+data:simboloquimicomineral rdf:type owl:datatypeproperty ;
+                           rdfs:domain data:minerales ;
+                           rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#tieneagua
+data:tieneagua rdf:type owl:datatypeproperty ;
+               rdfs:domain data:fruta ;
+               rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#tienecolor
+data:tienecolor rdf:type owl:datatypeproperty ;
+                rdfs:domain data:fruta ;
+                rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#tienesabor
+data:tienesabor rdf:type owl:datatypeproperty ;
+                rdfs:subpropertyof owl:topdataproperty ;
+                rdfs:domain data:fruta ;
+                rdfs:range xsd:string .
+
+
+###  http://localhost:3030/ontofrutis/data#tienetextura
+data:tienetextura rdf:type owl:datatypeproperty ;
+                  rdfs:domain data:fruta ;
+                  rdfs:range xsd:string .
+
+
+#################################################################
+#    classes
+#################################################################
+
+###  http://localhost:3030/ontofrutis/data#climatericas
+data:climatericas rdf:type owl:class ;
+                  rdfs:subclassof data:fruta .
+
+
+###  http://localhost:3030/ontofrutis/data#fruta
+data:fruta rdf:type owl:class .
+
+
+###  http://localhost:3030/ontofrutis/data#hidrosolubles
+data:hidrosolubles rdf:type owl:class ;
+                   rdfs:subclassof data:vitamina .
+
+
+###  http://localhost:3030/ontofrutis/data#liposolubles
+data:liposolubles rdf:type owl:class ;
+                  rdfs:subclassof data:vitamina .
+
+
+###  http://localhost:3030/ontofrutis/data#minerales
+data:minerales rdf:type owl:class .
+
+
+###  http://localhost:3030/ontofrutis/data#noclimatericas
+data:noclimatericas rdf:type owl:class ;
+                     rdfs:subclassof data:fruta .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina
+data:vitamina rdf:type owl:class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://localhost:3030/ontofrutis/data#Aceituna
+data:Aceituna rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b12 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_d ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ,
+                                 data:zinc ;
+              data:deregion "Templado" ;
+              data:id 1 ;
+              data:nombrecientificofruta "Olea europaea" ;
+              data:nombrecomunfruta "Aceituna" ;
+              data:tieneagua "79.99 g" ;
+              data:tienecolor "verde" ;
+              data:tienesabor "Acido" ;
+              data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Aguacate
+data:Aguacate rdf:type owl:NamedIndividual ,
+                       data:climatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_b9 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ,
+                                 data:zinc ;
+              data:deregion "Tropical" ;
+              data:id 2 ;
+              data:nombrecientificofruta "Persea americana" ;
+              data:nombrecomunfruta "Aguacate" ;
+              data:tieneagua "73.23 g" ;
+              data:tienecolor "Verde" ;
+              data:tienesabor "Nuez" ;
+              data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Albaricoque
+data:Albaricoque rdf:type owl:NamedIndividual ,
+                          data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Cacao
+data:Cacao rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b12 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_c ,
+                              data:vitamina_d ,
+                              data:vitamina_e ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:magnesio ,
+                              data:potasio ;
+           data:deregion "Tropical" ;
+           data:id 3 ;
+           data:nombrecientificofruta "Theobroma cacao" ;
+           data:nombrecomunfruta "Cacao" ;
+           data:tieneagua "3.6 ml" ;
+           data:tienecolor "Chocolate" ;
+           data:tienesabor "Amargo" ;
+           data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#calcio
+data:calcio rdf:type owl:NamedIndividual ,
+                     data:Minerales ;
+            data:nombreCientificoMineral "calx" ;
+            data:nombreComunMineral "calcio" ;
+            data:simboloQuimicoMineral "Ca" .
+
+
+###  http://localhost:3030/ontofrutis/data#Caqui
+data:Caqui rdf:type owl:NamedIndividual ,
+                    data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Cereza
+data:Cereza rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b12 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ,
+                               data:vitamina_d ,
+                               data:vitamina_e ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ,
+                               data:zinc ;
+            data:deregion "Templado" ;
+            data:id 4 ;
+            data:nombrecientificofruta "Prunus cerasus" ;
+            data:nombrecomunfruta "Cereza" ;
+            data:tieneagua "82.25g" ;
+            data:tienecolor "Rojo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Chirimoya
+data:Chirimoya rdf:type owl:NamedIndividual ,
+                        data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Ciruela
+data:Ciruela rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Templado" ;
+             data:id 5 ;
+             data:nombrecientificofruta "Prunus domestica" ;
+             data:nombrecomunfruta "Ciruela" ;
+             data:tieneagua "87 g" ;
+             data:tienecolor "Morado" ;
+             data:tienesabor "Agridulce" ;
+             data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Fluor
+data:Fluor rdf:type owl:NamedIndividual ,
+                    data:Minerales ;
+           data:nombreCientificoMineral "fluere" ;
+           data:nombreComunMineral "Fluor" ;
+           data:simboloQuimicoMineral "F" .
+
+
+###  http://localhost:3030/ontofrutis/data#fosforo
+data:fosforo rdf:type owl:NamedIndividual ,
+                      data:Minerales ;
+             data:nombreCientificoMineral "phosphoros" ;
+             data:nombreComunMineral "fosforo" ;
+             data:simboloQuimicoMineral "P" .
+
+
+###  http://localhost:3030/ontofrutis/data#Frambuesa
+data:Frambuesa rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b12 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_d ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ,
+                                  data:zinc ;
+               data:deregion "Templado" ;
+               data:id 6 ;
+               data:nombrecientificofruta "Rubus idaeus L." ;
+               data:nombrecomunfruta "Frambuesa" ;
+               data:tieneagua "85.75 g" ;
+               data:tienecolor "Rojo" ;
+               data:tienesabor "Dulce" ;
+               data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Fresa
+data:Fresa rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b12 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_c ,
+                              data:vitamina_d ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Templado" ;
+           data:id 7 ;
+           data:nombrecientificofruta "Fragaria L" ;
+           data:nombrecomunfruta "Fresa" ;
+           data:tieneagua "90.95 g" ;
+           data:tienecolor "Rojo" ;
+           data:tienesabor "Agridulce" ;
+           data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Guanábana
+data:Guanábana rdf:type owl:NamedIndividual ,
+                        data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Guayaba
+data:Guayaba rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 8 ;
+             data:nombrecientificofruta "Psidium" ;
+             data:nombrecomunfruta "Guayaba" ;
+             data:tieneagua "81 g" ;
+             data:tienecolor "Verde" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#hierro
+data:hierro rdf:type owl:NamedIndividual ,
+                     data:Minerales ;
+            data:nombreCientificoMineral "ferrum" ;
+            data:nombreComunMineral "hierro" ;
+            data:simboloQuimicoMineral "Fe" .
+
+
+###  http://localhost:3030/ontofrutis/data#Higo
+data:Higo rdf:type owl:NamedIndividual ,
+                   data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Jitomate
+data:Jitomate rdf:type owl:NamedIndividual ,
+                       data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Kiwi
+data:Kiwi rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Templada" ;
+          data:id 9 ;
+          data:nombrecientificofruta "Actinidia deliciosa" ;
+          data:nombrecomunfruta "Kiwi" ;
+          data:tieneagua "83.07 g" ;
+          data:tienecolor "Chocolate" ;
+          data:tienesabor "Agridulce" ;
+          data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Limón
+data:Limón rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b12 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ,
+                              data:vitamina_d ,
+                              data:vitamina_e ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Tropical" ;
+           data:id 10 ;
+           data:nombrecientificofruta "Citrus × limon" ;
+           data:nombrecomunfruta "Limon" ;
+           data:tieneagua "92.31g" ;
+           data:tienecolor "Verde" ;
+           data:tienesabor "ácido" ;
+           data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#magnesio
+data:magnesio rdf:type owl:NamedIndividual ,
+                       data:Minerales ;
+              data:nombreCientificoMineral "Magnesia" ;
+              data:nombreComunMineral "magnesio" ;
+              data:simboloQuimicoMineral "Mg" .
+
+
+###  http://localhost:3030/ontofrutis/data#Mandarina
+data:Mandarina rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b12 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ,
+                                  data:zinc ;
+               data:deregion "Tropical" ;
+               data:id 11 ;
+               data:nombrecientificofruta "Citrus reticulata" ;
+               data:nombrecomunfruta "Mandarina" ;
+               data:tieneagua "85.17 g" ;
+               data:tienecolor "Anaranjado" ;
+               data:tienesabor "Dulce" ;
+               data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Mango
+data:Mango rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Tropical" ;
+           data:id 12 ;
+           data:nombrecientificofruta "Mangifera indica" ;
+           data:nombrecomunfruta "Mango" ;
+           data:tieneagua "83.46 g" ;
+           data:tienecolor "Amarillo" ;
+           data:tienesabor "Agridulce" ;
+           data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Manzana
+data:Manzana rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Templado" ;
+             data:id 13 ;
+             data:nombrecientificofruta "Malus pumila" ;
+             data:nombrecomunfruta "Manzana" ;
+             data:tieneagua "85.56 g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Agridulce" ;
+             data:tienetextura "Firme" .
+
+
+###  http://localhost:3030/ontofrutis/data#Melocotón
+data:Melocotón rdf:type owl:NamedIndividual ,
+                        data:climatericas .
+
+
+###  http://localhost:3030/ontofrutis/data#Melón
+data:Melón rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Tropical" ;
+           data:id 13 ;
+           data:nombrecientificofruta "Cucumis melo" ;
+           data:nombrecomunfruta "Melón" ;
+           data:tieneagua "90 g" ;
+           data:tienecolor "Verde" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Naranja
+data:Naranja rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b7 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:Fluor ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:Yodo ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 15 ;
+             data:nombrecientificofruta "Citrus × sinensis" ;
+             data:nombrecomunfruta "Naranja" ;
+             data:tieneagua "86.75g" ;
+             data:tienecolor "Anaranjado" ;
+             data:tienesabor "Agridulce" ;
+             data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Nectarina
+data:Nectarina rdf:type owl:NamedIndividual ,
+                        data:climatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b12 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_d ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:zinc ;
+               data:deregion "Templado" ;
+               data:id 16 ;
+               data:nombrecientificofruta "Prunus persica" ;
+               data:nombrecomunfruta "Nectarina" ;
+               data:tieneagua "87 g" ;
+               data:tienecolor "Rojo" ;
+               data:tienesabor "Dulce" ;
+               data:tienetextura "Firme" .
+
+
+###  http://localhost:3030/ontofrutis/data#Papaya
+data:Papaya rdf:type owl:NamedIndividual ,
+                     data:climatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b9 ,
+                               data:vitamina_e ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ,
+                               data:zinc ;
+            data:deregion "Tropical" ;
+            data:id 17 ;
+            data:nombrecientificofruta "Carica papaya" ;
+            data:nombrecomunfruta "Amarillo" ,
+                                  "Papaya" ;
+            data:tieneagua "88 g" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#Pepino
+data:Pepino rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:potasio ,
+                               data:zinc ;
+            data:deregion "Tropical" ;
+            data:id 18 ;
+            data:nombrecientificofruta "Cucumis sativus L" ;
+            data:nombrecomunfruta "Pepino" ;
+            data:tieneagua "95.23 g" ;
+            data:tienecolor "Verde" ;
+            data:tienesabor "insípido" ;
+            data:tienetextura "Lisa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Pera
+data:Pera rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Frío" ;
+          data:id 19 ;
+          data:nombrecientificofruta "Pyrus" ;
+          data:nombrecomunfruta "Pera" ;
+          data:tieneagua "84 g" ;
+          data:tienecolor "Verde" ;
+          data:tienesabor "Agridulce" ;
+          data:tienetextura "Firme" .
+
+
+###  http://localhost:3030/ontofrutis/data#Pimiento
+data:Pimiento rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ,
+                                 data:zinc ;
+              data:deregion "Tropical" ;
+              data:id 20 ;
+              data:nombrecientificofruta "Capsicum annuum" ;
+              data:nombrecomunfruta "Pimiento" ;
+              data:tieneagua "93.89 g" ;
+              data:tienecolor "verde" ;
+              data:tienesabor "Agridulce" ;
+              data:tienetextura "Carnosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Piña
+data:Piña rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b12 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ,
+                             data:vitamina_d ,
+                             data:vitamina_e ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Tropical" ;
+          data:id 21 ;
+          data:nombrecientificofruta "Ananas comosus" ;
+          data:nombrecomunfruta "Piña" ;
+          data:tieneagua "86.0 g" ;
+          data:tienecolor "Amarillo" ;
+          data:tienesabor "Agridulce" ;
+          data:tienetextura "Rugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Plátano
+data:Plátano rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_e ;
+             data:tiene_mineral data:calcio ,
+                                data:Fluor ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 22 ;
+             data:nombrecientificofruta "Musa paradisiaca" ;
+             data:nombrecomunfruta "Banano" ;
+             data:tieneagua "74.91 g" ;
+             data:tienecolor "Amarillo" ;
+             data:tienesabor "Agridulce" ;
+             data:tienetextura "Blanda" .
+
+
+###  http://localhost:3030/ontofrutis/data#potasio
+data:potasio rdf:type owl:NamedIndividual ,
+                      data:Minerales ;
+             data:nombreCientificoMineral "K" ,
+                                          "kalium" ;
+             data:nombreComunMineral "potasio" .
+
+
+###  http://localhost:3030/ontofrutis/data#Sandía
+data:Sandía rdf:type owl:NamedIndividual ,
+                     data:climatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ,
+                               data:zinc ;
+            data:deregion "Tropical" ;
+            data:id 23 ;
+            data:nombrecientificofruta "Citrullus lanatus" ;
+            data:nombrecomunfruta "Sandía" ;
+            data:tieneagua "91.45 g" ;
+            data:tienecolor "Verde" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Blanda" .
+
+###  http://localhost:3030/ontofrutis/data#Tamarindo
+data:Tamarindo rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ,
+                                  data:zinc ;
+               data:deregion "Tropical" ;
+               data:id 24 ;
+               data:nombrecientificofruta "Tamarindus indica" ;
+               data:nombrecomunfruta "Tamarindo" ;
+               data:tieneagua "31.4g" ;
+               data:tienecolor "Chocolate" ;
+               data:tienesabor "Agridulce" ;
+               data:tienetextura "Rugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Manzana
+data:Manzana rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Templada" ;
+             data:id 1 ;
+             data:nombrecientificofruta "Malus domestica" ;
+             data:nombrecomunfruta "Manzana" ;
+             data:tieneagua "85.6g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Naranja
+data:Naranja rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Subtropical" ;
+             data:id 2 ;
+             data:nombrecientificofruta "Citrus sinensis" ;
+             data:nombrecomunfruta "Naranja" ;
+             data:tieneagua "86.8g" ;
+             data:tienecolor "Naranja" ;
+             data:tienesabor "Cítrico" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Plátano
+data:Plátano rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 3 ;
+             data:nombrecientificofruta "Musa paradisiaca" ;
+             data:nombrecomunfruta "Plátano" ;
+             data:tieneagua "74.9g" ;
+             data:tienecolor "Amarillo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Fresa
+data:Fresa rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Templada" ;
+           data:id 4 ;
+           data:nombrecientificofruta "Fragaria × ananassa" ;
+           data:nombrecomunfruta "Fresa" ;
+           data:tieneagua "90.9g" ;
+           data:tienecolor "Rojo" ;
+           data:tienesabor "Dulce-ácido" ;
+           data:tienetextura "Blanda" .
+
+###  http://localhost:3030/ontofrutis/data#Piña
+data:Piña rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Tropical" ;
+          data:id 5 ;
+          data:nombrecientificofruta "Ananas comosus" ;
+          data:nombrecomunfruta "Piña" ;
+          data:tieneagua "87.0g" ;
+          data:tienecolor "Amarillo" ;
+          data:tienesabor "Dulce-ácido" ;
+          data:tienetextura "Fibrosa" .
+
+###  http://localhost:3030/ontofrutis/data#Mango
+data:Mango rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Tropical" ;
+           data:id 6 ;
+           data:nombrecientificofruta "Mangifera indica" ;
+           data:nombrecomunfruta "Mango" ;
+           data:tieneagua "83.5g" ;
+           data:tienecolor "Amarillo-naranja" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Carnosa" .
+
+###  http://localhost:3030/ontofrutis/data#Uva
+data:Uva rdf:type owl:NamedIndividual ,
+                  data:noclimatericas ;
+         data:tienevitamina data:vitamina_b1 ,
+                            data:vitamina_b2 ,
+                            data:vitamina_b3 ,
+                            data:vitamina_b6 ,
+                            data:vitamina_c ,
+                            data:vitamina_k ;
+         data:tiene_mineral data:calcio ,
+                            data:fosforo ,
+                            data:hierro ,
+                            data:magnesio ,
+                            data:potasio ;
+         data:deregion "Templada" ;
+         data:id 7 ;
+         data:nombrecientificofruta "Vitis vinifera" ;
+         data:nombrecomunfruta "Uva" ;
+         data:tieneagua "81.3g" ;
+         data:tienecolor "Verde/Morado" ;
+         data:tienesabor "Dulce" ;
+         data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Sandía
+data:Sandía rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Tropical" ;
+            data:id 8 ;
+            data:nombrecientificofruta "Citrullus lanatus" ;
+            data:nombrecomunfruta "Sandía" ;
+            data:tieneagua "91.5g" ;
+            data:tienecolor "Rojo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Limón
+data:Limón rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ;
+           data:deregion "Subtropical" ;
+           data:id 9 ;
+           data:nombrecientificofruta "Citrus limon" ;
+           data:nombrecomunfruta "Limón" ;
+           data:tieneagua "88.9g" ;
+           data:tienecolor "Amarillo" ;
+           data:tienesabor "Ácido" ;
+           data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Papaya
+data:Papaya rdf:type owl:NamedIndividual ,
+                     data:climatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b9 ,
+                               data:vitamina_c ,
+                               data:vitamina_e ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Tropical" ;
+            data:id 10 ;
+            data:nombrecientificofruta "Carica papaya" ;
+            data:nombrecomunfruta "Papaya" ;
+            data:tieneagua "88.7g" ;
+            data:tienecolor "Naranja-rojizo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Kiwi
+data:Kiwi rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Subtropical" ;
+          data:id 11 ;
+          data:nombrecientificofruta "Actinidia deliciosa" ;
+          data:nombrecomunfruta "Kiwi" ;
+          data:tieneagua "83.1g" ;
+          data:tienecolor "Verde" ;
+          data:tienesabor "Ácido-dulce" ;
+          data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Cereza
+data:Cereza rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Templada" ;
+            data:id 12 ;
+            data:nombrecientificofruta "Prunus avium" ;
+            data:nombrecomunfruta "Cereza" ;
+            data:tieneagua "82.3g" ;
+            data:tienecolor "Rojo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Carnosa" .
+
+###  http://localhost:3030/ontofrutis/data#Pera
+data:Pera rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Templada" ;
+          data:id 13 ;
+          data:nombrecientificofruta "Pyrus communis" ;
+          data:nombrecomunfruta "Pera" ;
+          data:tieneagua "83.8g" ;
+          data:tienecolor "Verde" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Durazno
+data:Durazno rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Templada" ;
+             data:id 14 ;
+             data:nombrecientificofruta "Prunus persica" ;
+             data:nombrecomunfruta "Durazno" ;
+             data:tieneagua "87.7g" ;
+             data:tienecolor "Amarillo-rojizo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Coco
+data:Coco rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Tropical" ;
+          data:id 15 ;
+          data:nombrecientificofruta "Cocos nucifera" ;
+          data:nombrecomunfruta "Coco" ;
+          data:tieneagua "46.9g" ;
+          data:tienecolor "Blanco" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Firme" .
+
+###  http://localhost:3030/ontofrutis/data#Aguacate
+data:Aguacate rdf:type owl:NamedIndividual ,
+                       data:climatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_b9 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ,
+                                 data:zinc ;
+              data:deregion "Tropical" ;
+              data:id 16 ;
+              data:nombrecientificofruta "Persea americana" ;
+              data:nombrecomunfruta "Aguacate" ;
+              data:tieneagua "73.2g" ;
+              data:tienecolor "Verde" ;
+              data:tienesabor "Suave" ;
+              data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Frambuesa
+data:Frambuesa rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Templada" ;
+               data:id 17 ;
+               data:nombrecientificofruta "Rubus idaeus" ;
+               data:nombrecomunfruta "Frambuesa" ;
+               data:tieneagua "85.8g" ;
+               data:tienecolor "Rojo" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Blanda" .
+
+###  http://localhost:3030/ontofrutis/data#Arándano
+data:Arándano rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Templada" ;
+              data:id 18 ;
+              data:nombrecientificofruta "Vaccinium corymbosum" ;
+              data:nombrecomunfruta "Arándano" ;
+              data:tieneagua "84.2g" ;
+              data:tienecolor "Azul" ;
+              data:tienesabor "Dulce-ácido" ;
+              data:tienetextura "Firme" .
+
+###  http://localhost:3030/ontofrutis/data#Higo
+data:Higo rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Mediterránea" ;
+          data:id 19 ;
+          data:nombrecientificofruta "Ficus carica" ;
+          data:nombrecomunfruta "Higo" ;
+          data:tieneagua "79.1g" ;
+          data:tienecolor "Púrpura" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Granada
+data:Granada rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Mediterránea" ;
+             data:id 20 ;
+             data:nombrecientificofruta "Punica granatum" ;
+             data:nombrecomunfruta "Granada" ;
+             data:tieneagua "80.9g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Guayaba
+data:Guayaba rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 21 ;
+             data:nombrecientificofruta "Psidium guajava" ;
+             data:nombrecomunfruta "Guayaba" ;
+             data:tieneagua "84.0g" ;
+             data:tienecolor "Verde-amarillo" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Mandarina
+data:Mandarina rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Subtropical" ;
+               data:id 22 ;
+               data:nombrecientificofruta "Citrus reticulata" ;
+               data:nombrecomunfruta "Mandarina" ;
+               data:tieneagua "85.2g" ;
+               data:tienecolor "Naranja" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Jugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#Tamarindo
+data:Tamarindo rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ,
+                                  data:zinc ;
+               data:deregion "Tropical" ;
+               data:id 24 ;
+               data:nombrecientificofruta "Tamarindus indica" ;
+               data:nombrecomunfruta "Tamarindo" ;
+               data:tieneagua "31.4g" ;
+               data:tienecolor "Chocolate" ;
+               data:tienesabor "Agridulce" ;
+               data:tienetextura "Rugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Manzana
+data:Manzana rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Templada" ;
+             data:id 1 ;
+             data:nombrecientificofruta "Malus domestica" ;
+             data:nombrecomunfruta "Manzana" ;
+             data:tieneagua "85.6g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Naranja
+data:Naranja rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Subtropical" ;
+             data:id 2 ;
+             data:nombrecientificofruta "Citrus sinensis" ;
+             data:nombrecomunfruta "Naranja" ;
+             data:tieneagua "86.8g" ;
+             data:tienecolor "Naranja" ;
+             data:tienesabor "Cítrico" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Plátano
+data:Plátano rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 3 ;
+             data:nombrecientificofruta "Musa paradisiaca" ;
+             data:nombrecomunfruta "Plátano" ;
+             data:tieneagua "74.9g" ;
+             data:tienecolor "Amarillo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Fresa
+data:Fresa rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Templada" ;
+           data:id 4 ;
+           data:nombrecientificofruta "Fragaria × ananassa" ;
+           data:nombrecomunfruta "Fresa" ;
+           data:tieneagua "90.9g" ;
+           data:tienecolor "Rojo" ;
+           data:tienesabor "Dulce-ácido" ;
+           data:tienetextura "Blanda" .
+
+###  http://localhost:3030/ontofrutis/data#Piña
+data:Piña rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Tropical" ;
+          data:id 5 ;
+          data:nombrecientificofruta "Ananas comosus" ;
+          data:nombrecomunfruta "Piña" ;
+          data:tieneagua "87.0g" ;
+          data:tienecolor "Amarillo" ;
+          data:tienesabor "Dulce-ácido" ;
+          data:tienetextura "Fibrosa" .
+
+###  http://localhost:3030/ontofrutis/data#Mango
+data:Mango rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ,
+                              data:vitamina_k ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Tropical" ;
+           data:id 6 ;
+           data:nombrecientificofruta "Mangifera indica" ;
+           data:nombrecomunfruta "Mango" ;
+           data:tieneagua "83.5g" ;
+           data:tienecolor "Amarillo-naranja" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Carnosa" .
+
+###  http://localhost:3030/ontofrutis/data#Uva
+data:Uva rdf:type owl:NamedIndividual ,
+                  data:noclimatericas ;
+         data:tienevitamina data:vitamina_b1 ,
+                            data:vitamina_b2 ,
+                            data:vitamina_b3 ,
+                            data:vitamina_b6 ,
+                            data:vitamina_c ,
+                            data:vitamina_k ;
+         data:tiene_mineral data:calcio ,
+                            data:fosforo ,
+                            data:hierro ,
+                            data:magnesio ,
+                            data:potasio ;
+         data:deregion "Templada" ;
+         data:id 7 ;
+         data:nombrecientificofruta "Vitis vinifera" ;
+         data:nombrecomunfruta "Uva" ;
+         data:tieneagua "81.3g" ;
+         data:tienecolor "Verde/Morado" ;
+         data:tienesabor "Dulce" ;
+         data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Sandía
+data:Sandía rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Tropical" ;
+            data:id 8 ;
+            data:nombrecientificofruta "Citrullus lanatus" ;
+            data:nombrecomunfruta "Sandía" ;
+            data:tieneagua "91.5g" ;
+            data:tienecolor "Rojo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Limón
+data:Limón rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ,
+                              data:vitamina_c ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ;
+           data:deregion "Subtropical" ;
+           data:id 9 ;
+           data:nombrecientificofruta "Citrus limon" ;
+           data:nombrecomunfruta "Limón" ;
+           data:tieneagua "88.9g" ;
+           data:tienecolor "Amarillo" ;
+           data:tienesabor "Ácido" ;
+           data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Papaya
+data:Papaya rdf:type owl:NamedIndividual ,
+                     data:climatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b9 ,
+                               data:vitamina_c ,
+                               data:vitamina_e ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Tropical" ;
+            data:id 10 ;
+            data:nombrecientificofruta "Carica papaya" ;
+            data:nombrecomunfruta "Papaya" ;
+            data:tieneagua "88.7g" ;
+            data:tienecolor "Naranja-rojizo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Kiwi
+data:Kiwi rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Subtropical" ;
+          data:id 11 ;
+          data:nombrecientificofruta "Actinidia deliciosa" ;
+          data:nombrecomunfruta "Kiwi" ;
+          data:tieneagua "83.1g" ;
+          data:tienecolor "Verde" ;
+          data:tienesabor "Ácido-dulce" ;
+          data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Cereza
+data:Cereza rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ,
+                               data:vitamina_k ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Templada" ;
+            data:id 12 ;
+            data:nombrecientificofruta "Prunus avium" ;
+            data:nombrecomunfruta "Cereza" ;
+            data:tieneagua "82.3g" ;
+            data:tienecolor "Rojo" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Carnosa" .
+
+###  http://localhost:3030/ontofrutis/data#Pera
+data:Pera rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Templada" ;
+          data:id 13 ;
+          data:nombrecientificofruta "Pyrus communis" ;
+          data:nombrecomunfruta "Pera" ;
+          data:tieneagua "83.8g" ;
+          data:tienecolor "Verde" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Durazno
+data:Durazno rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Templada" ;
+             data:id 14 ;
+             data:nombrecientificofruta "Prunus persica" ;
+             data:nombrecomunfruta "Durazno" ;
+             data:tieneagua "87.7g" ;
+             data:tienecolor "Amarillo-rojizo" ;
+             data:tienesabor "Dulce" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Coco
+data:Coco rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_b9 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ,
+                             data:zinc ;
+          data:deregion "Tropical" ;
+          data:id 15 ;
+          data:nombrecientificofruta "Cocos nucifera" ;
+          data:nombrecomunfruta "Coco" ;
+          data:tieneagua "46.9g" ;
+          data:tienecolor "Blanco" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Firme" .
+
+###  http://localhost:3030/ontofrutis/data#Aguacate
+data:Aguacate rdf:type owl:NamedIndividual ,
+                       data:climatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_b9 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ,
+                                 data:zinc ;
+              data:deregion "Tropical" ;
+              data:id 16 ;
+              data:nombrecientificofruta "Persea americana" ;
+              data:nombrecomunfruta "Aguacate" ;
+              data:tieneagua "73.2g" ;
+              data:tienecolor "Verde" ;
+              data:tienesabor "Suave" ;
+              data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Frambuesa
+data:Frambuesa rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ,
+                                  data:vitamina_e ,
+                                  data:vitamina_k ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Templada" ;
+               data:id 17 ;
+               data:nombrecientificofruta "Rubus idaeus" ;
+               data:nombrecomunfruta "Frambuesa" ;
+               data:tieneagua "85.8g" ;
+               data:tienecolor "Rojo" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Blanda" .
+
+###  http://localhost:3030/ontofrutis/data#Arándano
+data:Arándano rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b5 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_c ,
+                                 data:vitamina_e ,
+                                 data:vitamina_k ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Templada" ;
+              data:id 18 ;
+              data:nombrecientificofruta "Vaccinium corymbosum" ;
+              data:nombrecomunfruta "Arándano" ;
+              data:tieneagua "84.2g" ;
+              data:tienecolor "Azul" ;
+              data:tienesabor "Dulce-ácido" ;
+              data:tienetextura "Firme" .
+
+###  http://localhost:3030/ontofrutis/data#Higo
+data:Higo rdf:type owl:NamedIndividual ,
+                   data:climatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b5 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Mediterránea" ;
+          data:id 19 ;
+          data:nombrecientificofruta "Ficus carica" ;
+          data:nombrecomunfruta "Higo" ;
+          data:tieneagua "79.1g" ;
+          data:tienecolor "Púrpura" ;
+          data:tienesabor "Dulce" ;
+          data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Granada
+data:Granada rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Mediterránea" ;
+             data:id 20 ;
+             data:nombrecientificofruta "Punica granatum" ;
+             data:nombrecomunfruta "Granada" ;
+             data:tieneagua "80.9g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Guayaba
+data:Guayaba rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b5 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_b9 ,
+                                data:vitamina_c ,
+                                data:vitamina_e ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ,
+                                data:zinc ;
+             data:deregion "Tropical" ;
+             data:id 21 ;
+             data:nombrecientificofruta "Psidium guajava" ;
+             data:nombrecomunfruta "Guayaba" ;
+             data:tieneagua "84.0g" ;
+             data:tienecolor "Verde-amarillo" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Mandarina
+data:Mandarina rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_b9 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Subtropical" ;
+               data:id 22 ;
+               data:nombrecientificofruta "Citrus reticulata" ;
+               data:nombrecomunfruta "Mandarina" ;
+               data:tieneagua "85.2g" ;
+               data:tienecolor "Naranja" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Maracuyá
+data:Maracuyá rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_b9 ,
+                                 data:vitamina_c ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Tropical" ;
+              data:id 23 ;
+              data:nombrecientificofruta "Passiflora edulis" ;
+              data:nombrecomunfruta "Maracuyá" ;
+              data:tieneagua "72.9g" ;
+              data:tienecolor "Amarillo" ;
+              data:tienesabor "Ácido" ;
+              data:tienetextura "Pulposa" .
+
+###  http://localhost:3030/ontofrutis/data#Lichi
+data:Lichi rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_c ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Subtropical" ;
+           data:id 25 ;
+           data:nombrecientificofruta "Litchi chinensis" ;
+           data:nombrecomunfruta "Lichi" ;
+           data:tieneagua "81.8g" ;
+           data:tienecolor "Blanco" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Carambola
+data:Carambola rdf:type owl:NamedIndividual ,
+                        data:noclimatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Tropical" ;
+               data:id 26 ;
+               data:nombrecientificofruta "Averrhoa carambola" ;
+               data:nombrecomunfruta "Carambola" ;
+               data:tieneagua "91.4g" ;
+               data:tienecolor "Amarillo" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Pitahaya
+data:Pitahaya rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_c ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Tropical" ;
+              data:id 27 ;
+              data:nombrecientificofruta "Hylocereus undatus" ;
+              data:nombrecomunfruta "Pitahaya" ;
+              data:tieneagua "87.0g" ;
+              data:tienecolor "Blanco" ;
+              data:tienesabor "Dulce" ;
+              data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Nectarina
+data:Nectarina rdf:type owl:NamedIndividual ,
+                        data:climatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Templada" ;
+               data:id 28 ;
+               data:nombrecientificofruta "Prunus persica var. nucipersica" ;
+               data:nombrecomunfruta "Nectarina" ;
+               data:tieneagua "87.6g" ;
+               data:tienecolor "Rojo-amarillo" ;
+               data:tienesabor "Dulce" ;
+               data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Ciruela
+data:Ciruela rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_b6 ,
+                                data:vitamina_c ,
+                                data:vitamina_k ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Templada" ;
+             data:id 29 ;
+             data:nombrecientificofruta "Prunus domestica" ;
+             data:nombrecomunfruta "Ciruela" ;
+             data:tieneagua "85.2g" ;
+             data:tienecolor "Púrpura" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Pomelo
+data:Pomelo rdf:type owl:NamedIndividual ,
+                     data:noclimatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b5 ,
+                               data:vitamina_b6 ,
+                               data:vitamina_c ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Subtropical" ;
+            data:id 30 ;
+            data:nombrecientificofruta "Citrus paradisi" ;
+            data:nombrecomunfruta "Pomelo" ;
+            data:tieneagua "90.5g" ;
+            data:tienecolor "Rosa-amarillo" ;
+            data:tienesabor "Amargo-dulce" ;
+            data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Membrillo
+data:Membrillo rdf:type owl:NamedIndividual ,
+                        data:climatericas ;
+               data:tienevitamina data:vitamina_a ,
+                                  data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Templada" ;
+               data:id 31 ;
+               data:nombrecientificofruta "Cydonia oblonga" ;
+               data:nombrecomunfruta "Membrillo" ;
+               data:tieneagua "83.8g" ;
+               data:tienecolor "Amarillo" ;
+               data:tienesabor "Astringente" ;
+               data:tienetextura "Dura" .
+
+###  http://localhost:3030/ontofrutis/data#Níspero
+data:Níspero rdf:type owl:NamedIndividual ,
+                      data:climatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Subtropical" ;
+             data:id 32 ;
+             data:nombrecientificofruta "Eriobotrya japonica" ;
+             data:nombrecomunfruta "Níspero" ;
+             data:tieneagua "86.7g" ;
+             data:tienecolor "Amarillo-naranja" ;
+             data:tienesabor "Dulce-ácido" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Dátil
+data:Dátil rdf:type owl:NamedIndividual ,
+                    data:noclimatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_b5 ,
+                              data:vitamina_b6 ,
+                              data:vitamina_b9 ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ,
+                              data:zinc ;
+           data:deregion "Desértica" ;
+           data:id 33 ;
+           data:nombrecientificofruta "Phoenix dactylifera" ;
+           data:nombrecomunfruta "Dátil" ;
+           data:tieneagua "21.3g" ;
+           data:tienecolor "Marrón" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Carnosa" .
+
+###  http://localhost:3030/ontofrutis/data#Caqui
+data:Caqui rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_c ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ;
+           data:deregion "Templada" ;
+           data:id 34 ;
+           data:nombrecientificofruta "Diospyros kaki" ;
+           data:nombrecomunfruta "Caqui" ;
+           data:tieneagua "80.3g" ;
+           data:tienecolor "Naranja" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Guanábana
+data:Guanábana rdf:type owl:NamedIndividual ,
+                        data:climatericas ;
+               data:tienevitamina data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b5 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Tropical" ;
+               data:id 35 ;
+               data:nombrecientificofruta "Annona muricata" ;
+               data:nombrecomunfruta "Guanábana" ;
+               data:tieneagua "81.2g" ;
+               data:tienecolor "Blanco" ;
+               data:tienesabor "Dulce-ácido" ;
+               data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Chirimoya
+data:Chirimoya rdf:type owl:NamedIndividual ,
+                        data:climatericas ;
+               data:tienevitamina data:vitamina_b1 ,
+                                  data:vitamina_b2 ,
+                                  data:vitamina_b3 ,
+                                  data:vitamina_b6 ,
+                                  data:vitamina_c ;
+               data:tiene_mineral data:calcio ,
+                                  data:fosforo ,
+                                  data:hierro ,
+                                  data:magnesio ,
+                                  data:potasio ;
+               data:deregion "Subtropical" ;
+               data:id 36 ;
+               data:nombrecientificofruta "Annona cherimola" ;
+               data:nombrecomunfruta "Chirimoya" ;
+               data:tieneagua "75.7g" ;
+               data:tienecolor "Verde-blanco" ;
+               data:tienesabor "Dulce" ;
+               data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Mora
+data:Mora rdf:type owl:NamedIndividual ,
+                   data:noclimatericas ;
+          data:tienevitamina data:vitamina_a ,
+                             data:vitamina_b1 ,
+                             data:vitamina_b2 ,
+                             data:vitamina_b3 ,
+                             data:vitamina_b6 ,
+                             data:vitamina_c ,
+                             data:vitamina_e ,
+                             data:vitamina_k ;
+          data:tiene_mineral data:calcio ,
+                             data:fosforo ,
+                             data:hierro ,
+                             data:magnesio ,
+                             data:potasio ;
+          data:deregion "Templada" ;
+          data:id 37 ;
+          data:nombrecientificofruta "Rubus ulmifolius" ;
+          data:nombrecomunfruta "Mora" ;
+          data:tieneagua "88.2g" ;
+          data:tienecolor "Negro" ;
+          data:tienesabor "Dulce-ácido" ;
+          data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Grosella
+data:Grosella rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_b6 ,
+                                 data:vitamina_c ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Templada" ;
+              data:id 38 ;
+              data:nombrecientificofruta "Ribes rubrum" ;
+              data:nombrecomunfruta "Grosella" ;
+              data:tieneagua "84.0g" ;
+              data:tienecolor "Rojo" ;
+              data:tienesabor "Ácido" ;
+              data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Acerola
+data:Acerola rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_b3 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Tropical" ;
+             data:id 39 ;
+             data:nombrecientificofruta "Malpighia emarginata" ;
+             data:nombrecomunfruta "Acerola" ;
+             data:tieneagua "91.5g" ;
+             data:tienecolor "Rojo" ;
+             data:tienesabor "Ácido" ;
+             data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Rambután
+data:Rambután rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_c ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Tropical" ;
+              data:id 40 ;
+              data:nombrecientificofruta "Nephelium lappaceum" ;
+              data:nombrecomunfruta "Rambután" ;
+              data:tieneagua "82.1g" ;
+              data:tienecolor "Blanco" ;
+              data:tienesabor "Dulce-ácido" ;
+              data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Physalis
+data:Physalis rdf:type owl:NamedIndividual ,
+                       data:noclimatericas ;
+              data:tienevitamina data:vitamina_a ,
+                                 data:vitamina_b1 ,
+                                 data:vitamina_b2 ,
+                                 data:vitamina_b3 ,
+                                 data:vitamina_c ;
+              data:tiene_mineral data:calcio ,
+                                 data:fosforo ,
+                                 data:hierro ,
+                                 data:magnesio ,
+                                 data:potasio ;
+              data:deregion "Subtropical" ;
+              data:id 41 ;
+              data:nombrecientificofruta "Physalis peruviana" ;
+              data:nombrecomunfruta "Physalis" ;
+              data:tieneagua "85.0g" ;
+              data:tienecolor "Amarillo-naranja" ;
+              data:tienesabor "Dulce-ácido" ;
+              data:tienetextura "Jugosa" .
+
+###  http://localhost:3030/ontofrutis/data#Kumquat
+data:Kumquat rdf:type owl:NamedIndividual ,
+                      data:noclimatericas ;
+             data:tienevitamina data:vitamina_a ,
+                                data:vitamina_b1 ,
+                                data:vitamina_b2 ,
+                                data:vitamina_c ;
+             data:tiene_mineral data:calcio ,
+                                data:fosforo ,
+                                data:hierro ,
+                                data:magnesio ,
+                                data:potasio ;
+             data:deregion "Subtropical" ;
+             data:id 42 ;
+             data:nombrecientificofruta "Citrus japonica" ;
+             data:nombrecomunfruta "Kumquat" ;
+             data:tieneagua "80.8g" ;
+             data:tienecolor "Naranja" ;
+             data:tienesabor "Agridulce" ;
+             data:tienetextura "Crujiente" .
+
+###  http://localhost:3030/ontofrutis/data#Mamey
+data:Mamey rdf:type owl:NamedIndividual ,
+                    data:climatericas ;
+           data:tienevitamina data:vitamina_a ,
+                              data:vitamina_b1 ,
+                              data:vitamina_b2 ,
+                              data:vitamina_b3 ,
+                              data:vitamina_c ,
+                              data:vitamina_e ;
+           data:tiene_mineral data:calcio ,
+                              data:fosforo ,
+                              data:hierro ,
+                              data:magnesio ,
+                              data:potasio ;
+           data:deregion "Tropical" ;
+           data:id 43 ;
+           data:nombrecientificofruta "Pouteria sapota" ;
+           data:nombrecomunfruta "Mamey" ;
+           data:tieneagua "68.5g" ;
+           data:tienecolor "Naranja-rojizo" ;
+           data:tienesabor "Dulce" ;
+           data:tienetextura "Cremosa" .
+
+###  http://localhost:3030/ontofrutis/data#Zapote
+data:Zapote rdf:type owl:NamedIndividual ,
+                     data:climatericas ;
+            data:tienevitamina data:vitamina_a ,
+                               data:vitamina_b1 ,
+                               data:vitamina_b2 ,
+                               data:vitamina_b3 ,
+                               data:vitamina_c ;
+            data:tiene_mineral data:calcio ,
+                               data:fosforo ,
+                               data:hierro ,
+                               data:magnesio ,
+                               data:potasio ;
+            data:deregion "Tropical" ;
+            data:id 44 ;
+            data:nombrecientificofruta "Manilkara zapota" ;
+            data:nombrecomunfruta "Zapote" ;
+            data:tieneagua "78.3g" ;
+            data:tienecolor "Marrón" ;
+            data:tienesabor "Dulce" ;
+            data:tienetextura "Suave" .
+
+###  http://localhost:3030/ontofrutis/data#Guayabilla
+data:Guayabilla rdf:type owl:NamedIndividual ,
+                         data:noclimatericas ;
+                data:tienevitamina data:vitamina_a ,
+                                   data:vitamina_b1 ,
+                                   data:vitamina_b2 ,
+                                   data:vitamina_c ;
+                data:tiene_mineral data:calcio ,
+                                   data:hierro ,
+                                   data:magnesio ,
+                                   data:potasio ;
+                data:deregion "Tropical" ;
+                data:id 45 ;
+                data:nombrecientificofruta "Psidium cattleianum" ;
+                data:nombrecomunfruta "Guayabilla" ;
+                data:tieneagua "83.9g" ;
+                data:tienecolor "Rojo" ;
+                data:tienesabor "Dulce-ácido" ;
+                data:tienetextura "Jugosa" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_a
+data:vitamina_a rdf:type owl:namedindividual ,
+                         data:liposolubles ;
+                data:descripcionvitamina "es una vitamina liposoluble (es decir que es soluble en cuerpos grasos, aceites y que no se puede liberar en la orina como normalmente lo hacen las vitaminas hidrosolubles) que se requiere en varios procesos biológicos, tales como la visión, el desarrollo del sistema inmunitario, la formación y mantenimiento de las células epiteliales (de la piel y las mucosas), el desarrollo embrionario y el crecimiento" ;
+                data:nombrecomunvitamina "Vitamina A" ;
+                data:nombrerealvitamina "retinol" ;
+                data:pesomolarvitamina "286,4516 g/mol" ;
+                data:puntodeebullisionvitamina "125 °c" ;
+                data:puntodefusionvitamina "80°c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b1
+data:vitamina_b1 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "la Vitamina B1 ayuda a las células del cuerpo a convertir los carbohidratos en energía. es también esencial para las funciones cardiacas, y músculos. cumple también una importante función en las membranas nerviosas y en la conducción nerviosa. puede reforzar el sistema inmune y mejorar la capacidad corporal de reaccionar ante situaciones de estrés." ;
+                 data:nombrecomunvitamina "Vitamina B1" ;
+                 data:nombrerealvitamina "tiamina" ;
+                 data:pesomolarvitamina "265,356 g/mol" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "-285 °c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b12
+data:vitamina_b12 rdf:type owl:namedindividual ,
+                           data:hidrosolubles ;
+                  data:descripcionvitamina "es una vitamina hidrosoluble esencial para el funcionamiento normal del cerebro, del sistema nervioso, y para la formación de la sangre y de varias proteínas." ;
+                  data:nombrecomunvitamina "Vitamina B12" ;
+                  data:nombrerealvitamina "cobalamina" ;
+                  data:pesomolarvitamina "1355.37 g/mol" ;
+                  data:puntodeebullisionvitamina "null" ;
+                  data:puntodefusionvitamina "300 °c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b2
+data:vitamina_b2 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "Vitamina B2, conocida como riboflavina, es un micronutriente absorbido fácilmente con un papel clave para la conservación de la salud en humanos y animales." ;
+                 data:nombrecomunvitamina "Vitamina B2" ;
+                 data:nombrerealvitamina "riboflavina" ;
+                 data:pesomolarvitamina "265,356 g/mol" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "-285 °c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b3
+data:vitamina_b3 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "la Vitamina B3 (conocida también como niacina, ácido nicotínico y vitamina pp) es un compuesto orgánico y uno de los cuarenta a ochenta nutrientes humanos esenciales." ;
+                 data:nombrecomunvitamina "Vitamina B3" ;
+                 data:nombrerealvitamina "niacina" ;
+                 data:pesomolarvitamina "123.1094 g/mol" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "237 ℃" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b5
+data:vitamina_b5 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "la Vitamina B5 es esencial para todas las formas de vida. juega un papel importante en el cuidado del cabello, piel y sangre. de hecho, es también esencial para el metabolismo de alimentos." ;
+                 data:nombrecomunvitamina "Vitamina B5" ;
+                 data:nombrerealvitamina "ácido pantoténico" ;
+                 data:pesomolarvitamina "null" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "170 ℃" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b6
+data:vitamina_b6 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "vitamina hidrosoluble, esto implica que se elimina a través de la orina, y se ha de reponer diariamente con la dieta. se encuentra en el germen de trigo, carne, huevos, pescado y verduras, legumbres, nueces, alimentos ricos en granos integrales, al igual que en los panes y cereales enriquecidos." ;
+                 data:nombrecomunvitamina "Vitamina B6" ;
+                 data:nombrerealvitamina "piridoxina" ;
+                 data:pesomolarvitamina "205,64g/mol" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "205 ℃" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b7
+data:vitamina_b7 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "es una vitamina estable al calor, soluble en agua y alcohol, y susceptible a la oxidación que interviene en el metabolismo de los hidratos de carbono, grasas, aminoácidos y purinas." ;
+                 data:nombrecomunvitamina "Vitamina B7" ;
+                 data:nombrerealvitamina "biotina" ;
+                 data:pesomolarvitamina "244.31 g/mol" ;
+                 data:puntodeebullisionvitamina "null" ;
+                 data:puntodefusionvitamina "232 °c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_b9
+data:vitamina_b9 rdf:type owl:namedindividual ,
+                          data:hidrosolubles ;
+                 data:descripcionvitamina "es una vitamina hidrosoluble del complejo de vitaminas b, necesaria para la formación de proteínas estructurales y hemoglobina (y por esto, transitivamente, de los glóbulos rojos)." ;
+                 data:nombrecomunvitamina "Vitamina B9" ;
+                 data:nombrerealvitamina "ácido fólico" ;
+                 data:pesomolarvitamina "441.40 g·mol−1" ;
+                 data:puntodeebullisionvitamina "-273,15 ° c" ;
+                 data:puntodefusionvitamina "250°c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_c
+data:vitamina_c rdf:type owl:namedindividual ,
+                         data:hidrosolubles ;
+                data:descripcionvitamina "la presencia de esta vitamina es requerida para un cierto número de reacciones metabólicas2 en todos los animales y plantas y es creada internamente por casi todos los organismos, siendo los humanos una notable excepción." ;
+                data:nombrecomunvitamina "Vitamina C" ;
+                data:nombrerealvitamina "ácido ascórbico" ;
+                data:pesomolarvitamina "176,13 g/mol" ;
+                data:puntodeebullisionvitamina "553 °c" ;
+                data:puntodefusionvitamina "190 °c" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_d
+data:vitamina_d rdf:type owl:namedindividual ,
+                         data:liposolubles ;
+                data:descripcionvitamina ":  la vitamina d, calciferol o antirraquítica es un heterolípido insaponificable del grupo de los esteroides. se le llama también Vitamina Antirraquítica ya que su deficiencia provoca raquitismo." ;
+                data:nombrecomunvitamina "Vitamina D" ;
+                data:nombrerealvitamina "calciferol" ;
+                data:pesomolarvitamina "null" ;
+                data:puntodeebullisionvitamina "null" ;
+                data:puntodefusionvitamina "null" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_e
+data:vitamina_e rdf:type owl:namedindividual ,
+                         data:liposolubles ;
+                data:descripcionvitamina "vitamina liposoluble que actúa como antioxidante a nivel de la síntesis del pigmento hemo, que es una parte esencial de la hemoglobina de los glóbulos rojos." ;
+                data:nombrecomunvitamina "Vitamina E" ;
+                data:nombrerealvitamina "α-tocoferol" ;
+                data:pesomolarvitamina "430.71 g/mol" ;
+                data:puntodeebullisionvitamina "485.9℃" ;
+                data:puntodefusionvitamina "3.5℃" .
+
+
+###  http://localhost:3030/ontofrutis/data#vitamina_k
+data:vitamina_k rdf:type owl:namedindividual ,
+                         data:liposolubles ;
+                data:descripcionvitamina "la única misión conocida hasta el momento de la vitamina k es la de actuar como cofactor de un enzima concreto, una carboxilasa, que cataliza la conversión de algunos restos de ácido glutámico de ciertas proteínas" ;
+                data:nombrecomunvitamina "Vitamina K" ;
+                data:nombrerealvitamina "fitomenadiona" ;
+                data:pesomolarvitamina "450,69g/mol" ;
+                data:puntodeebullisionvitamina "113.8℃" ,
+                                               "304.5℃" .
+
+
+###  http://localhost:3030/ontofrutis/data#yodo
+data:yodo rdf:type owl:namedindividual ,
+                   data:minerales ;
+          data:nombrecientificomineral "iodes" ;
+          data:nombrecomunmineral "yodo" ;
+          data:simboloquimicomineral "i" .
+
+
+###  http://localhost:3030/ontofrutis/data#zinc
+data:zinc rdf:type owl:namedindividual ,
+                   data:minerales ;
+          data:nombrecientificomineral "zink" ;
+          data:nombrecomunmineral "zinc" ;
+          data:simboloquimicomineral "zn" .
+
+data:sodio rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "natrium";
+    data:nombrecomunmineral "sodio";
+    data:simboloquimicomineral "na".
+
+data:cobre rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "cuprum";
+    data:nombrecomunmineral "cobre";
+    data:simboloquimicomineral "cu".
+
+data:manganeso rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "manganesum";
+    data:nombrecomunmineral "manganeso";
+    data:simboloquimicomineral "mn".
+
+data:selenio rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "selenium";
+    data:nombrecomunmineral "selenio";
+    data:simboloquimicomineral "se".
+
+data:cromo rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "chromium";
+    data:nombrecomunmineral "cromo";
+    data:simboloquimicomineral "cr".
+
+data:molibdeno rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "molybdaenum";
+    data:nombrecomunmineral "molibdeno";
+    data:simboloquimicomineral "mo".
+
+data:cloro rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "chlorum";
+    data:nombrecomunmineral "cloro";
+    data:simboloquimicomineral "cl".
+
+data:azufre rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "sulphur";
+    data:nombrecomunmineral "azufre";
+    data:simboloquimicomineral "s".
+
+data:cobalto rdf:type owl:namedindividual, data:minerales;
+    data:nombrecientificomineral "cobaltum";
+    data:nombrecomunmineral "cobalto";
+    data:simboloquimicomineral "co".
+
+###  http://localhost:3030/ontofrutis/data#calcio
+data:calcio rdf:type owl:namedindividual ,
+                     data:minerales ;
+            data:nombrecientificomineral "calcium" ;
+            data:nombrecomunmineral "calcio" ;
+            data:simboloquimicomineral "ca" .
+
+###  http://localhost:3030/ontofrutis/data#fosforo
+data:fosforo rdf:type owl:namedindividual ,
+                      data:minerales ;
+             data:nombrecientificomineral "phosphorus" ;
+             data:nombrecomunmineral "fósforo" ;
+             data:simboloquimicomineral "p" .
+
+###  http://localhost:3030/ontofrutis/data#hierro
+data:hierro rdf:type owl:namedindividual ,
+                     data:minerales ;
+            data:nombrecientificomineral "ferrum" ;
+            data:nombrecomunmineral "hierro" ;
+            data:simboloquimicomineral "fe" .
+
+
+###  http://localhost:3030/ontofrutis/data#magnesio
+data:magnesio rdf:type owl:namedindividual ,
+                       data:minerales ;
+              data:nombrecientificomineral "magnesium" ;
+              data:nombrecomunmineral "magnesio" ;
+              data:simboloquimicomineral "mg" .
+
+###  http://localhost:3030/ontofrutis/data#potasio
+data:potasio rdf:type owl:namedindividual ,
+                      data:minerales ;
+             data:nombrecientificomineral "kalium" ;
+             data:nombrecomunmineral "potasio" ;
+             data:simboloquimicomineral "k" .
+
+###  http://localhost:3030/ontofrutis/data#fluor
+data:fluor rdf:type owl:namedindividual ,
+                    data:minerales ;
+           data:nombrecientificomineral "fluorine" ;
+           data:nombrecomunmineral "flúor" ;
+           data:simboloquimicomineral "f" .
